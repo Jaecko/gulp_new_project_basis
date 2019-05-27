@@ -36,7 +36,7 @@ npm install
 
 ### Visual Studio Code
 
-Install and start the **LiveReload** plugin so that your page reloads on your browser.
+Install and start the **Live Server** plugin so that your page reloads on your browser.
 
 ### Compiles files
 
