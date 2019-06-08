@@ -1,6 +1,6 @@
 const { src, dest, watch, series, parallel, lastRun } = require('gulp'),
   useref = require('gulp-useref'),
-  uglify = require('gulp-uglify'),
+  uglify = require('gulp-uglify-es').default,
   minifyCss = require('gulp-clean-css'),
   gulpif = require('gulp-if'),
   imagemin = require('gulp-imagemin'),
