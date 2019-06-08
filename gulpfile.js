@@ -44,7 +44,7 @@ function watcher() {
   refresh.listen();
   watch('./app/scss/**/*.scss', { ignoreinitial: false }, sass);
   watch('./app/js/**/*.coffee', { ignoreinitial: false }, js);
-  watch('./app/*.html', { ignoreinitial: false }, parallel(js, sass));
+  watch('./app/**/*.+(html|php)', { ignoreinitial: false }, parallel(js, sass));
 }
 
 /* Deploy */
@@ -63,7 +63,7 @@ function fonts() {
 }
 
 function setDist() {
-  return src('./app/*.html')
+  return src('./app/**/*.+(html|php)')
     .pipe(useref())
     .pipe(gulpif('*.js', uglify()))
     .pipe(gulpif('*.css', minifyCss()))
